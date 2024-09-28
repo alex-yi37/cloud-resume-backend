@@ -1,6 +1,10 @@
 import json, boto3
 
-client = boto3.client('dynamodb')
+# need to specify region name in case it can't be inferred from something like
+# aws config files (e.g. when using cli client). In AWS console, I imagine region
+# name can also be inferred based on account info
+# here, though, there isn't anything to infer the region from, so specifying it explicitly
+client = boto3.client('dynamodb', region_name = "us-east-1")
 
 def lambda_handler(event, context):
     try:
