@@ -45,9 +45,9 @@ class TestLambdaHandler(unittest.TestCase):
       table.put_item(Item=test_item)
 
     def test_lambda_handler_response(self):
-      from ..lambdas import old_handler
+      from ..lambdas import cloud_resume_handler
 
-      response = old_handler.lambda_handler({}, {})
+      response = cloud_resume_handler.lambda_handler({}, {})
 
       # read response body as json and turn it into a dict
       body = json.loads(response["body"])
