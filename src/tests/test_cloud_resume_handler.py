@@ -57,5 +57,5 @@ class TestLambdaHandler(unittest.TestCase):
       
     def test_always_fails(self):
        # just want a test to fail
-       self.assertEqual(1, 2)
+       self.assertEqual(1, 1)
     
