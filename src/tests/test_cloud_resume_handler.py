@@ -55,4 +55,7 @@ class TestLambdaHandler(unittest.TestCase):
       self.assertEqual(response["statusCode"], 200)
       self.assertEqual(body["data"]["viewCount"], 1)
       
+    def test_always_fails(self):
+       # just want a test to fail
+       self.assertEqual(1, 1)
     
